@@ -16,11 +16,11 @@
 
 #If both characters are letters and not the same case, return 0.
 
-def same_case(a, b): 
-    if a.isalnum() and b.isalnum() and a.isupper() == b.isupper():
-        return 1
-    elif a.isalnum() and b.isalnum() and a.isupper() != b.isupper():
-        return 0
-    else:
-        return -1
+def same_case(a, b):
+    if a.isalpha() and b.isalpha():
+        if a.islower() and b.islower() or a.isupper() and b.isupper():
+            return 1
+        else:
+            return 0
+    return -1
 #print(same_case("a", "a"))
